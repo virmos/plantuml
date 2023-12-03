@@ -79,3 +79,17 @@ note left of
 note right of 
 note over
 ```
+
+# Markdown configuration
+```
+# settings.json
+"plantuml.server": "http://localhost:8080/svg",
+"plantuml.render": "PlantUMLServer",
+"markdown-preview-enhanced.plantumlServer": "http://localhost:8080/svg",
+
+# diagram.md
+---
+export_on_save:
+  html: true
+---
+```

@@ -83,6 +83,17 @@ end
 </code></pre><pre data-role="codeBlock" data-info="" class="language-text text"><code>note left of
 note right of 
 note over
+</code></pre><h1 id="markdown-configuration">Markdown configuration </h1>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code># settings.json
+"plantuml.server": "http://localhost:8080/svg",
+"plantuml.render": "PlantUMLServer",
+"markdown-preview-enhanced.plantumlServer": "http://localhost:8080/svg",
+
+# diagram.md
+---
+export_on_save:
+  html: true
+---
 </code></pre>
       </div>
       
