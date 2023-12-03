@@ -49,6 +49,18 @@ Deployment:
 
 # SEQUENCE CHEATSHEET
 ```
+Entities:
+    participant     a rectangle
+    actor           a person
+    database
+    entity          M(model)
+    control         C(controller)
+    collection
+    queue
+    boundary
+```
+
+```
 participant "User A" as a <<Interface>>
 participant "User B" as b <<Interface>>
 a -> b: call

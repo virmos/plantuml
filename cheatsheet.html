@@ -66,7 +66,16 @@ Deployment:
     Node_L(alias, label, ?type, ?descr, ?sprite, ?tags, ?link): left aligned Node()
     Node_R(alias, label, ?type, ?descr, ?sprite, ?tags, ?link): right aligned Node()
 </code></pre><h1 id="sequence-cheatsheet">SEQUENCE CHEATSHEET </h1>
-<pre data-role="codeBlock" data-info="" class="language-text text"><code>participant "User A" as a &lt;&lt;Interface&gt;&gt;
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>Entities:
+    participant     a rectangle
+    actor           a person
+    database
+    entity          M(model)
+    control         C(controller)
+    collection
+    queue
+    boundary
+</code></pre><pre data-role="codeBlock" data-info="" class="language-text text"><code>participant "User A" as a &lt;&lt;Interface&gt;&gt;
 participant "User B" as b &lt;&lt;Interface&gt;&gt;
 a -&gt; b: call
 return result
