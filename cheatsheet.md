@@ -65,7 +65,7 @@ return result
 ```
 
 ```
-group #LightBlue/LightPink if condition
+group #LightBlue/LightPink if condition [comment]
 end
 ```
 
