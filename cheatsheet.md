@@ -5,9 +5,23 @@ export_on_save:
 # C4 CHEATSHEET
 
 ```
+Themes: 
+!include https://raw.githubusercontent.com/patrik-csak/one-dark-plantuml-theme/v1.0.1/theme.puml
+!theme cb_seq_YlOrBr_9 from https://raw.githubusercontent.com/mweagle/C4-PlantUML-Themes/main/palettes
+
+Sprites: https://crashedmind.github.io/PlantUMLHitchhikersGuide/NetworkUsersMachines/NetworkUsersMachines.html#view-all-the-icons-with-listsprites
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 Container:
-    Container(alias, label, ?techn, ?descr, ?sprite, ?tags, ?link)
+    Container(alias, label, ?techn, ?descr, ?$sprite, ?tags, ?link)
     ContainerDb
     ContainerQueue
     Container_Ext
@@ -17,9 +31,9 @@ Container:
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 System: 
-    Person(alias, label, ?descr, ?sprite, ?tags, ?link, ?type)
+    Person(alias, label, ?descr, ?$sprite, ?tags, ?link, ?type)
     Person_Ext
-    System(alias, label, ?descr, ?sprite, ?tags, ?link, ?type)
+    System(alias, label, ?descr, ?$sprite, ?tags, ?link, ?type)
     SystemDb
     SystemQueue
     System_Ext
@@ -32,7 +46,7 @@ System:
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 Component
-    Component(alias, label, ?techn, ?descr, ?sprite, ?tags, ?link)
+    Component(alias, label, ?techn, ?descr, ?$sprite, ?tags, ?link)
     ComponentDb
     ComponentQueue
     Component_Ext
@@ -41,11 +55,20 @@ Component
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
 Deployment:
-    Deployment_Node(alias, label, ?type, ?descr, ?sprite, ?tags, ?link)
-    Node(alias, label, ?type, ?descr, ?sprite, ?tags, ?link): short name of Deployment_Node()
-    Node_L(alias, label, ?type, ?descr, ?sprite, ?tags, ?link): left aligned Node()
-    Node_R(alias, label, ?type, ?descr, ?sprite, ?tags, ?link): right aligned Node()
+    Deployment_Node(alias, label, ?type, ?descr, ?$sprite, ?tags, ?link)
+    Node(alias, label, ?type, ?descr, ?$sprite, ?tags, ?link): short name of Deployment_Node()
+    Node_L(alias, label, ?type, ?descr, ?$sprite, ?tags, ?link): left aligned Node()
+    Node_R(alias, label, ?type, ?descr, ?$sprite, ?tags, ?link): right aligned Node()
+    AddProperty(label, descr)
 ```
+
+```
+Rel(node1, node2, "Uses", "HTTPS")
+LAYOUT_WITH_LEGEND()
+SHOW_LEGEND()
+```
+
+![Alt text](image.png)
 
 # SEQUENCE CHEATSHEET
 ```
@@ -94,10 +117,14 @@ note over
 
 # Markdown configuration
 ```
+https://hub.docker.com/r/plantuml/plantuml-server/
+
 # settings.json
 "plantuml.server": "http://localhost:8080/svg",
 "plantuml.render": "PlantUMLServer",
 "markdown-preview-enhanced.plantumlServer": "http://localhost:8080/svg",
+"markdown-preview-enhanced.scrollSync": false,
+"markdown-preview-enhanced.previewMode": "Previews Only",
 
 # diagram.md
 ---
