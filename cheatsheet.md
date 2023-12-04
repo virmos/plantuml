@@ -125,7 +125,8 @@ https://hub.docker.com/r/plantuml/plantuml-server/
 "markdown-preview-enhanced.plantumlServer": "http://localhost:8080/svg",
 "markdown-preview-enhanced.scrollSync": false,
 "markdown-preview-enhanced.previewMode": "Previews Only",
-
+"workbench.editorAssociations": {
+}, # add this to override vscode default
 # diagram.md
 ---
 export_on_save:
