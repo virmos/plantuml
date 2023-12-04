@@ -127,9 +127,17 @@ https://hub.docker.com/r/plantuml/plantuml-server/
 "markdown-preview-enhanced.previewMode": "Previews Only",
 "workbench.editorAssociations": {
 }, # add this to override vscode default
+"plantuml.jarArgs": [
+ "-DRELATIVE_INCLUDE=."
+ ],
+
 # diagram.md
 ---
 export_on_save:
   html: true
 ---
+!include <C4/C4_Deployment>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+!include <C4/C4_Component>
 ```
