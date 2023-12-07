@@ -140,4 +140,5 @@ export_on_save:
 !include <C4/C4_Context>
 !include <C4/C4_Container>
 !include <C4/C4_Component>
+skinparam linetype polyline
 ```
