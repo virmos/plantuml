@@ -141,4 +141,28 @@ export_on_save:
 !include <C4/C4_Container>
 !include <C4/C4_Component>
 skinparam linetype polyline
+autoactivate on
 ```
+
+# C4 Template
+    Deployment_Node(, "", ""){
+        System_Boundary(, ""){
+
+        }
+        System_Ext(, ""){
+            Container(, "", "", "")
+            ContainerDb(, "", "", "")
+        }
+    }
+    
+    Person(, "")
+
+    Rel(, , "")
+
+# Sequence Template
+    box ""
+        group #LightBlue Apply config nginx
+            consul_client -> key_value: Watch + Reload Nginx
+            return
+        end
+    end box
