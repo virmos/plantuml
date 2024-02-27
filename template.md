@@ -17,3 +17,16 @@ LAYOUT_WITH_LEGEND()
 
 @enduml
 ```
+
+---
+export_on_save:
+  html: true
+---
+```plantuml
+@startuml
+!pragma useVerticalIf on
+start
+
+stop
+@enduml
+```
