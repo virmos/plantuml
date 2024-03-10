@@ -1,0 +1,50 @@
+{
+  "_id": "65e81763bfdd3f001217b688",
+  "customer_id": "65e816304ba06800dc1c7e70",
+  "customer_service_id": "65e8169a4ba06800dfb3ac2f",
+  "distributor_id": "5a655b33da0d1e1f8db866f3",
+  "actived_services": [
+    "waf"
+  ],
+  "backends": [
+    "125.212.138.81"
+  ],
+  "deleted": false,
+  "domains": [
+    "performance.com.vn"
+  ],
+  "https": {},
+  "https_ports": [],
+  "ips": [
+    "125.212.138.81"
+  ],
+  "subdomains": {
+    "cGVyZm9ybWFuY2UuY29tLnZuXzgw": {
+      "ips": [
+        "125.212.138.81"
+      ],
+      "backends": [
+        "125.212.138.81"
+      ],
+      "https": 0,
+      "https_config": "",
+      "subdomain": "performance.com.vn",
+      "active": true,
+      "port": 80
+    }
+  },
+  "waf_config": {
+    "web_framework": "",
+    "pci_dss_mode": "pci_dss_off"
+  },
+  "acls": {},
+  "active": true,
+  "cluster_id": "6503d527acda82000e4efaf2",
+  "created_date": "2024-03-06T07:12:35.495Z",
+  "identity": "performance.com.vn",
+  "modified_date": "2024-03-06T07:12:35.495Z",
+  "schema": "wp",
+  "services": [
+    "wp"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "65d40920407fcd04eaf845cc",
+  "status": "active",
+  "modified_date": "2024-02-20T02:06:24.393Z",
+  "activated_date": "2024-02-20T02:06:24.072Z",
+  "saler_id": "",
+  "phone": "2154785458",
+  "id_number": "215421458",
+  "user_name": "demo_test",
+  "saler_name": "",
+  "deleted": false,
+  "password": "$2b$12$H4KbRZ.X2lXSfHDWsQY38OiC3o3I9o20XsV9kCsv.dEiYo1/rGdgO",
+  "tax_number": "1234567836",
+  "customer_notice": {
+    "toggle_telegram": true,
+    "toggle_email": true,
+    "report_duration": 1
+  },
+  "lock_trial": {},
+  "created_date": "2024-02-20T02:06:24.093Z",
+  "fullname": "DƯƠNG THỊ THẢO",
+  "distributor_id": "5a655b33da0d1e1f8db866f3",
+  "type": "personal",
+  "email": "DEMOTEST@GMAIL.COM",
+  "owner_id": "5a655e36da0d1e1f8db866f8",
+  "histories": [
+    {
+      "date": "2024-02-20T02:06:24.428Z",
+      "message": "Created new record",
+      "data": {},
+      "actor_id": "5a655e36da0d1e1f8db866f8",
+      "actor": "sadmin"
+    }
+  ],
+  "synced": true,
+  "customer_code": "2148",
+  "using_service": 1,
+  "services": [
+    "dns",
+    "wp"
+  ],
+  "domain_ip_ref": [
+    "testdemo.com.vn",
+    "testdemo1.com.vn",
+    "testdemo3.com.vn",
+    "testipv4.com.vn",
+    "testdemo.com.vn",
+    "testdemo6.com.vn",
+    "testdel.com.vn",
+    "testdemo2.com.vn"
+  ]
+}

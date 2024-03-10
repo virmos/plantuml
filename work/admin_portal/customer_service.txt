@@ -1,0 +1,60 @@
+{
+  "_id": "65e8169a4ba06800dfb3ac2f",
+  "load": 2000000,
+  "domain": [
+    {
+      "_id": "65e81763bfdd3f001217b680",
+      "name": "performance.com.vn80"
+    }
+  ],
+  "saler_id": "",
+  "service_name": "WebProtection",
+  "nduration": 1,
+  "ref_id": "",
+  "package_id": "5c00234ea404e71c942441da",
+  "cluster_id": "6503d527acda82000e4efaf2",
+  "customer_name": "TRỊNH VĂN NHÂN",
+  "modified_date": "2024-03-06T07:12:35.332Z",
+  "duration_time_unit": "month",
+  "c_created_date": "2024-03-06T07:07:28.744Z",
+  "cluster_name": "STAGING_NO_CONSUL",
+  "deleted": false,
+  "customer_id": "65e816304ba06800dc1c7e70",
+  "ndomain": 5,
+  "status": "active",
+  "end_date": "2024-04-06T07:09:14.827Z",
+  "order_id": "65e8169a4ba06800dfb3ac2d",
+  "load_unit": "Request/s",
+  "start_date": "2024-03-06T07:09:14.827Z",
+  "created_date": "2024-03-06T07:09:14.827Z",
+  "service_id": "5a6f04b4da0d1e47f8d15e34",
+  "distributor_id": "5a655b33da0d1e1f8db866f3",
+  "histories": [
+    {
+      "date": "2024-03-06T07:09:14.950Z",
+      "message": "Created new record",
+      "data": {
+        "order_id": "65e8169a4ba06800dfb3ac2d",
+        "package_id": "5c00234ea404e71c942441da",
+        "start_date": "2024-03-06T07:09:14.827Z",
+        "end_date": "2024-04-06T07:09:14.827Z"
+      },
+      "actor_id": "5a655e36da0d1e1f8db866f8",
+      "actor": "sadmin"
+    },
+    {
+      "date": "2024-03-06T07:12:35.333Z",
+      "message": "Updated record",
+      "data": {
+        "domain": [
+          {
+            "_id": "65e81763bfdd3f001217b680",
+            "name": "performance.com.vn80"
+          }
+        ]
+      },
+      "actor_id": "5a655e36da0d1e1f8db866f8",
+      "actor": "sadmin"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "65035b46acda82000f2106ea",
+  "name": "TEST",
+  "deleted": false,
+  "distributor_id": [
+    "5a655b33da0d1e1f8db866f3",
+    "5c0601e2a85cbd31db25e493",
+    "5ca1b62819e04f5aa17f120f"
+  ],
+  "statusapply": 0,
+  "nginx_token": "",
+  "nginx_url": {
+    "6503fdbbb8491c498ee1fb3c": "http://192.168.2.79:8500/v1/kv"
+  },
+  "consul_token": "",
+  "consul_url": "http://192.168.2.78:8500/v1/kv"
+}

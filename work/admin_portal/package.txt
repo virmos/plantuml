@@ -1,0 +1,274 @@
+{
+  "_id": "5c00234ea404e71c942441da",
+  "status": "active",
+  "base_packages": [
+    "5fa26de555a4c534cd2e7812",
+    "5c0022f9a404e71c932441da"
+  ],
+  "price_base": "service",
+  "name": "WP_Gold",
+  "modified_date": "2023-01-30T04:42:56.940Z",
+  "deleted": false,
+  "price": 3990000,
+  "note": "",
+  "duration": 1,
+  "time_unit": "month",
+  "created_date": "2018-11-29T17:35:10.436Z",
+  "services": [
+    {
+      "price": 2000000,
+      "_id": "5a6f0530da0d1e47f8d15e36",
+      "properties": [
+        {
+          "unit": "Request/s",
+          "_id": "5be5b510abd94d42c6aba94e",
+          "type": "number",
+          "name": "load",
+          "value": "2000000"
+        },
+        {
+          "unit": "Max domain",
+          "_id": "5be5b510abd94d42c6aba94f",
+          "type": "number",
+          "name": "ndomain",
+          "value": "5"
+        }
+      ],
+      "name": "AntiDDoS Layer 7"
+    },
+    {
+      "price": 1000000,
+      "_id": "5a6f04b4da0d1e47f8d15e34",
+      "properties": [
+        {
+          "unit": "Request/s",
+          "_id": "5be5b510abd94d42c6aba94b",
+          "type": "number",
+          "name": "load",
+          "value": 2000000
+        },
+        {
+          "unit": "Max domain",
+          "_id": "5be5b510abd94d42c6aba94c",
+          "type": "number",
+          "name": "ndomain",
+          "value": 5
+        }
+      ],
+      "name": "WAF"
+    },
+    {
+      "price": 500000,
+      "_id": "5db11a7af92abf3c98dde3ae",
+      "properties": [
+        {
+          "unit": "rps",
+          "_id": "5db11a7af92abf3c98dde3ad",
+          "type": "number",
+          "name": "load",
+          "value": 2000000
+        }
+      ],
+      "name": "WebAnalytics"
+    },
+    {
+      "price": 490000,
+      "_id": "5e8e050ead251d14adf5fa59",
+      "properties": [
+        {
+          "unit": "domain",
+          "_id": "5e8e052ead251d14ae4d01ba",
+          "type": "number",
+          "name": "Số lượng domain",
+          "value": 10
+        }
+      ],
+      "name": "DNS"
+    }
+  ],
+  "distributor_id": "5a655b33da0d1e1f8db866f3",
+  "max_price": 3990000,
+  "owner_id": "5a655e36da0d1e1f8db866f8",
+  "histories": [
+    {
+      "date": "2018-11-29T17:35:10.439Z",
+      "message": "Created new record",
+      "data": {},
+      "actor_id": "5a655e36da0d1e1f8db866f8",
+      "actor": "sadmin"
+    },
+    {
+      "date": "2018-11-29T17:45:48.918Z",
+      "message": "Updated record",
+      "data": {
+        "services": {
+          "0": {
+            "properties": {
+              "1": {
+                "value": "20"
+              }
+            }
+          },
+          "1": {
+            "properties": {
+              "1": {
+                "value": "20"
+              }
+            }
+          }
+        }
+      },
+      "actor_id": "5a655e36da0d1e1f8db866f8",
+      "actor": "sadmin"
+    },
+    {
+      "date": "2018-12-21T10:07:44.153Z",
+      "message": "Updated record",
+      "data": {
+        "name": "WP_Gold"
+      },
+      "actor_id": "5a655e36da0d1e1f8db866f8",
+      "actor": "sadmin"
+    },
+    {
+      "date": "2019-12-20T15:24:09.226Z",
+      "message": "Updated record",
+      "data": {
+        "services": {
+          "0": {
+            "properties": {
+              "1": {
+                "value": "5"
+              }
+            }
+          },
+          "1": {
+            "properties": {
+              "1": {
+                "value": "5"
+              }
+            }
+          }
+        }
+      },
+      "actor_id": "5d511b0a72446e7b25256932",
+      "actor": "cs_luubh"
+    },
+    {
+      "date": "2020-05-09T15:47:26.757Z",
+      "message": "Updated record",
+      "data": {
+        "base_packages": [],
+        "services": {
+          "0": {
+            "price": 2494000
+          },
+          "1": {
+            "properties": {
+              "0": {
+                "value": 2000000
+              },
+              "1": {
+                "value": 5
+              }
+            }
+          },
+          "insert": [
+            [
+              2,
+              {
+                "price": 1000,
+                "_id": "5db11a7af92abf3c98dde3ae",
+                "properties": [
+                  {
+                    "unit": "rps",
+                    "_id": "5db11a7af92abf3c98dde3ad",
+                    "type": "number",
+                    "name": "load",
+                    "value": 2000000
+                  }
+                ],
+                "name": "WebAnalytics"
+              }
+            ]
+          ]
+        },
+        "price_base": "service"
+      },
+      "actor_id": "5c205a1f8f853c6c0db5a379",
+      "actor": "dungvt202"
+    },
+    {
+      "date": "2020-06-30T14:49:31.531Z",
+      "message": "Updated record",
+      "data": {
+        "services": {
+          "2": {
+            "price": 999
+          },
+          "insert": [
+            [
+              3,
+              {
+                "price": 1,
+                "_id": "5e8e050ead251d14adf5fa59",
+                "properties": [
+                  {
+                    "unit": "domain",
+                    "_id": "5e8e052ead251d14ae4d01ba",
+                    "type": "number",
+                    "name": "Số lượng domain",
+                    "value": 10
+                  }
+                ],
+                "name": "DNS"
+              }
+            ]
+          ]
+        }
+      },
+      "actor_id": "5c205a1f8f853c6c0db5a379",
+      "actor": "dungvt202"
+    },
+    {
+      "date": "2021-04-19T12:22:04.288Z",
+      "message": "Updated record",
+      "data": {
+        "base_packages": [],
+        "services": {
+          "0": {
+            "price": 2000000
+          },
+          "1": {
+            "price": 1000000
+          },
+          "2": {
+            "price": 500000
+          },
+          "3": {
+            "price": 499000
+          }
+        },
+        "price": 3999000,
+        "max_price": 3999000
+      },
+      "actor_id": "5d511b0a72446e7b25256932",
+      "actor": "cs_luubh"
+    },
+    {
+      "date": "2023-01-30T04:42:56.942Z",
+      "message": "Updated record",
+      "data": {
+        "services": {
+          "3": {
+            "price": 490000
+          }
+        },
+        "price": 3990000,
+        "max_price": 3990000
+      },
+      "actor_id": "5d511b0a72446e7b25256932",
+      "actor": "cs_luubh"
+    }
+  ]
+}
