@@ -1,0 +1,195 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Ha Dong Giang} \\[7.5pt]
+\href{https://github.com/virmos}{\raisebox{-0.05\height}\faGithub\ virmos} \ $|$ \ 
+\href{https://virmos.github.io}{\raisebox{-0.05\height}\faGlobe \ virmos.githubio.com} \ $|$ \ 
+\href{mailto:hadonggiang1810@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ hadonggiang1810@gmail.com} \ $|$ \ 
+\href{tel:(+84)0387412803}{\raisebox{-0.05\height}\faMobile \ (+84)387412803} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+A developer with a passion for exploring the intricacies of cybersecurity during off-hours, while applying expertise in web development during the day. Seeking opportunities to leverage diverse skills and interests to contribute effectively to innovative projects. Love clock cycles.
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Viettel Cyber Security} & \hfill May 2023 - now \\[3.75pt]
+    \textit{Backend Developer}
+\end{tabularx}
+\begin{itemize}
+    \item Implemented configuration synchronization solution for load balancing across Layer 7 nodes in a multi-cluster environment within a web protection system
+    \item Developed an API service to facilitate customer self-service functionality within a dashboard, enabling users to track their attack history and visualize data through diagrams
+    \item Managed maintenance and bug-fixing tasks across multiple repositories
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Institute of Computer Science, Vietnam National University} & \hfill Jan 2021 - May 2023 \\[3.75pt]
+\textit{Student Researcher}
+\end{tabularx}
+\begin{itemize}
+    \item Applying Sentiment Analysis on Vietnamese E-commerce product reviews dataset
+    \item Accumulated knowledge on analysis natural language processing model
+\end{itemize}
+
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Compiler} & \hfill \\[3.75pt]
+\end{tabularx}
+\begin{itemize}
+    \item Designed and implemented a custom Java-to-bytecode compiler, enabling the translation of Java source code into bytecode instructions
+    \item Additionally, orchestrated the compilation and execution process of a Tetris game using the aforementioned compiler
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Compiler} & \hfill \\[3.75pt]
+\end{tabularx}
+\begin{itemize}
+    \item Designed, developed, and deployed an e-commerce website with comprehensive functionalities allowing administrators to efficiently monitor orders, customers, and products
+    \item Implemented an intuitive interface enabling customers to browse products, make purchases, and access their purchase history for enhanced user experience
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{The Degree of Bachelor in Information Technology} & \hfill \\[3.75pt]
+    \textit{Vietnam National University - University of Engineering and Technology}
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    \multicolumn{2}{@{}X@{}}{\textbf{Languages}: Python, Golang, Javascript, Java}{\textbf{Frameworks}: React, Angular}
+\end{tabularx}
+
+\end{document}
