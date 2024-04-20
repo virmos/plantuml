@@ -23,10 +23,10 @@ line = {valid bit | tag | 0 1 2...B-1}
                             2^b bytes
 1. Address of word:
 t bits | s bits | b bits
-![alt text](image.png)
+![alt text](images/image.png)
 
 2. If cache miss -> old *line is replaced
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 3. High bit indexing vs middle bit indexing
 TT|SS|BB        0000xx -> set 0
@@ -57,19 +57,17 @@ cache hit time of 1 cycle
 miss penalty of 100 cycle
     97% hits:  1 cycle + 0.03 x 100 cycles = 4 cycles
     99% hits:  1 cycle + 0.01 x 100 cycles = 2 cycles
-
 # ***Memory Slope increases***
 ## Matrix multiplication
 ### Problem Description
-![alt text](image-5.png)
-![alt text](image-3.png)
+![alt text](images/image-5.png)
+![alt text](images/image-3.png)
 ### Cache miss analysis
 Best case
-![alt text](image-4.png)
-
+![alt text](images/image-4.png)
 ## Block matrix multiplication
 ### Cache miss analysis
-
+![alt text](images/image-2.png)
 
 # References
 https://www.cs.cmu.edu/afs/cs/academic/class/15213-f21/www/lectures/10-cache-memories.pdf
