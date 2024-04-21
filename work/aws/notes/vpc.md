@@ -27,3 +27,11 @@ Direct Connect
     took a month to establish
 # ***3-tier architecture***
 ![alt text](images/image-7.png)
+
+# ***VPC***
+1. subnets associated with AZ (availabily zone)
+2. EC2 and RDS are deployed within AZ
+3. Internet gateway
+    within <-> external internet
+4. NAT
+    within -> external internet

@@ -10,7 +10,7 @@ Cache == n Sets = n Blocks
 4 sets
 2 blocks
 -> 2-way set-associative cache
-Refer block 0 and 8 will result in conflict miss everytim
+Refer block 0 and 8 will result in conflict miss everytime
 ## Types of cache miss
 cold miss
 capacity miss
@@ -33,6 +33,8 @@ TT|SS|BB        0000xx -> set 0
                 0001xx -> set 1
 SS|TT|BB        0000xx -> set 0
                 0001xx -> set 0
+![alt text](images/image-12.png)
+![alt text](images/image-13.png)
 # ***Cache Writes***
 1. Types
 write-through + no-write-allocate

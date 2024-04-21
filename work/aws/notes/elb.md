@@ -10,6 +10,7 @@ Route table (rules):
     - hostname in url
     - query string, parameters
 
+Cross-Zone load balancing
 # ***Types***
 1. Overview
 Network Load Balancer has one static IP address per AZ and you can attach an Elastic IP address to it. Application Load Balancers and Classic Load Balancers as a static DNS name
@@ -40,7 +41,9 @@ path
 name
 value
 
-## ***Cross-Zone load balancing***
+# ***Security Groups***
+Listener on port
+Routing to target group
 
 ## ***Auto Scaling Groups***
 Predictive scaling

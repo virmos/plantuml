@@ -1,4 +1,5 @@
-# ***DEFINITIONS***
+# ***Lambda function***
+## Definitions
 - Pricing
 First 1.000.000 requests are free
 $0.20 per 1.000.000 requests after
@@ -10,6 +11,7 @@ User invoked:
     Application load balancer (ALB)
         Expose lambda function as an HTTPS endpoint
         - Request: ELB info, method & path
+        ![alt text](images/image-8.png)
     Amazon API Gateway
     Amazon CloudFront
     Amazon S3 Batch
@@ -34,10 +36,81 @@ Service invoked:
 - Security
 Execution roles
     AWSLambdaBasicExecutionRole -> upload logs to Cloudwatch
-    AWSLambdaSQSQueueExecutionRole -> read from SQS
+    AWSLambdaSQSQueueExecutionRole -> read from SQS (lambda trigger)
     AWSLambdaVPCAccessExecutionRole -> deploy lambda functions in VPC
 
-# ***Examples***
+- An unique url endpoint is created for each lambda function
+    https://<url_id>.lambda-url.<region>.on.aws
+
+AWS S3 Ingest
+Functions, Trigger, Event, Runtime
+## Life cycle
+init phase
+    Extension init
+    Runtime init
+    Function init
+invoke phase
+## Cloudfront vs LambdaEdge
+![alt text](images/image-9.png)
+![alt text](images/image-10.png)
+## Lambda in VPC
+Lambda function -> ENI (elastic network interface) -> RDS Security Group
+aws vpc                                               private rds
+
+Lambda fucntion -> NAT gateway -> IGW -> public internet
+aws vpc            public subnet
+
+Lambda fucntion -> VPC Endpoint -> public internet
+aws vpc            private subnet
+## Lambda file system mounting
+/tmp
+lambda layers
+amazon S3
+EFS
+![alt text](images/image-11.png)
+## Concurrency
+1000 concurrent executions
+Throttle behavior
+    synchronous -> ThrottleError 429
+    asynchronous -> retry -> DLQ
+## Lambda + Cloudformation
+Create new S3 instance + store lambda function as file
+    S3BucketParam
+    S3KeyParam (lambda function)
+    These configurations are inside yaml
+Create new template
+ ![alt text](images/image-14.png)
+## Lambda Container images
+build from base image that implements lambda run time API
+## Lambda versions
+1. types
+lambda version == code + configurations
+    work on $LATEST
+    publish verson
+    versions weight (50%-50% mean 2 requests, 1 to ver 1, 1 to ver 2)
+alias == pointers to lambda versions
+2. CodeDeploy
+Migration 10% new version, 90% previous version
+Linear
+    10% every 3 min
+Canary
+    10% for 30 min then 100%
+AllAtONce
+    100% new version
+3. yaml
+name
+    name of lambda function
+alias
+    alias of lambda function
+CurrentVersion
+TargetVersion
+## Security
+AWS_IAM
+Same account
+    Identity based policy OR Resource based policy
+Cross account
+    Identity based policy AND Resource based policy
+# ***Lambda Examples***
 ## API Gateway + Lambda
 https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway-tutorial.html
 
@@ -89,29 +162,7 @@ SQS
 Event source mapping
     trigger lambda function for batch of messages in SQS
 
-# ***VPC***
-1. subnets associated with AZ (availabily zone)
-2. EC2 and RDS are deployed within AZ
-3. Internet gateway
-    within <-> external internet
-4. NAT
-    within -> external internet
-
-
-# ***Concepts***
-Functions, Trigger, Event, Runtime
-## Life cycle
-init phase
-    Extension init
-    Runtime init
-    Function init
-invoke phase
-
-# ***Additional add-ons ***
-AWS Cloudfront
-AWS S3 Ingest
-
-# ***ECOMMERCE CRUD***
+## Ecommerce CRUD
 client -> api gateway REST -> product microservices -> product table
                                                   aws sdk
 Infrastructure creation on AWS
@@ -152,3 +203,5 @@ Method:
         // DELETE /product/{id}
 Deploy /prod/product
 #### Cloudwatch
+
+# ***API Gateway***
